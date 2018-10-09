@@ -1,0 +1,38 @@
+content = [
+  {
+    "title": "Address-Dependent Filtering",
+    "content": "The NAT filters out packets not destined to the internal address X:x. Additionally, the NAT will filter out packets from Y:y destined for the internal endpoint X:x if X:x has not sent packets to Y:any previously (independently of the port used by Y). In other words, for receiving packets from a specific external endpoint, it is necessary for the internal endpoint to send packets first to that specific external endpoint’s IP address."
+  },
+  {
+    "title": "Address and Port-Dependent Filtering",
+    "content": "The NAT filters out packets not destined for the internal address X:x. Additionally, the NAT will filter out packets from Y:y destined for the internal endpoint X:x if X:x has not sent packets to Y:y previously. In other words, for receiving packets from a specific external endpoint, it is necessary for the internal endpoint to send packets first to that external endpoint’s IP address and port."
+  },
+  {
+    "title": "Duration",
+    "content": "Time taken to successfully establish holepunched connection, it is not the duration of the connection itself. It is only displayed for successful connections and is applicable separately to TCP Holepunch and uTP holepunch."
+  },
+  {
+    "title": "EDM",
+    "content": "Endpoint-Dependent Mapping refers to the combination of “Address-Dependent Filtering” and “Address and Port-Dependent Filtering”."
+  },
+  {
+    "title": "EIM",
+    "content": "Endpoint-Independent Mapping allows the device to accept incoming traffic to a mapped public port from ANY external endpoint on the public network."
+  },
+  {
+    "title": "NAT traversal",
+    "content": "NAT (Network Address Translator) Traversal is in essence a hole punching technique that exploits how NATs handle some protocols (e.g. UDP & TCP) to allow previously blocked packets through the NAT."
+  },
+  {
+    "title": "Protocols",
+    "content": "Protocols are special sets of rules that end points in a telecommunication connection use when they communicate. Protocols specify interactions between the communicating entities."
+  },
+  {
+    "title": "TCP",
+    "content": "Transmission Control Protocol (TCP), which uses a set of rules to exchange messages with other Internet points at the information packet level."
+  },
+  {
+    "title": "µTP",
+    "content": "Micro Transport Protocol or µTP (sometimes also uTP) is an open UDP-based variant of the BitTorrent peer-to-peer file sharing protocol intended to mitigate poor latency and other congestion control issues found in conventional BitTorrent over TCP, while providing reliable, ordered delivery."
+  },
+]

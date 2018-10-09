@@ -11,6 +11,8 @@ import Dashboard from "../pages/Dashboard";
 import NatType from "../pages/NatType";
 import ConnectionAttempts from "../pages/ConnectionAttempts";
 import Protocol from "../pages/Protocol";
+import Information from "../pages/Information";
+import GetInvolved from "../pages/GetInvolved";
 import { hoursInMilliseconds, daysInMilliseconds } from '../redux/utils';
 import { fetchLogs, filterByRange } from '../redux/dispatcher/logs_action';
 
@@ -138,6 +140,22 @@ class App extends Component {
                 </span>
               </Link>
             </Menu.Item>
+            <Menu.Item key="5">
+              <Link to="/information">
+                <span id="item">
+                  <Icon type="info-circle" />
+                  <span>Information</span>
+                </span>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="6">
+              <Link to="/get_involved">
+                <span id="item">
+                  <Icon type="rocket" />
+                  <span>Get Involved</span>
+                </span>
+              </Link>
+            </Menu.Item>
           </Menu>
         </Sider>
 
@@ -174,6 +192,8 @@ class App extends Component {
             <Route path="/nat" component={NatType} />
             <Route path="/protocol" component={Protocol} />
             <Route path="/connect" component={ConnectionAttempts} />
+            <Route path="/information" component={Information} />
+            <Route path="/get_involved" component={GetInvolved} />
           </Content>)}
         </Layout>
       </Layout>
