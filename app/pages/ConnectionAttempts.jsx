@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Card, Button } from "antd";
+import { Row, Col, Card, Button, Icon } from "antd";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -46,7 +46,7 @@ class ConnectionAttempts extends Component {
     // this.props.revalidate(mods.CON_ACT_,this.props.store.filteredConnectionResults);
   }
   // shouldComponentUpdate(nextProps, nextState) {
-  //   //initially if returns false since the state isn't changed. 
+  //   //initially if returns false since the state isn't changed.
   //   //we set the initial state using constructor and this function for later changes
   //   if (this.props.store.filteredConnectionResults != nextProps.store.filteredConnectionResults) {
   //     this.props.revalidate(mods.CON_ACT_,nextProps.store.filteredConnectionResults);
@@ -59,18 +59,19 @@ class ConnectionAttempts extends Component {
 
   render() {
     return (
-      <div className="gutter-example">
-        <span className="page-heading">
-          <h1 style={{ padding: "5px 0px 0px 40px", display: "inline" }}>Connection Attempts </h1>
-          {/* <span style={{ float: "right", padding: "10px 20px 0px 0px" }}>
-            <h3 style={{ float: "left", padding: "5px 30px 0px 0px" }}>  Connection result:</h3>
+      <div className="page-1">
+        <span className="page-1-head">
+          <h1 className="page-1-head-title">Connection Attempts <Icon type="info-circle" theme="outlined" style={{fontSize: '14px', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.45)'}}/>Connection Attempts </h1>
+            <div className="page-1-head-opts">
+            <h3 className="page-1-head-opts-title">  Connection result:</h3>
             <ButtonGroup selectedIndex={this.props.store.connectionResultFilter}
               changeFilter={this.props.filterByConnectionResult} />
-          </span> */}
+          </div>
         </span>
         <Row gutter={24} style={{ margin: "24px 8px" }}>
           <Col className="gutter-row" span={24}>
             <Card
+              bordered={false}
               style={{
                 background: "#fff",
                 borderRadius: 5,

@@ -48,12 +48,12 @@ class DropDown extends Component {
             </Menu>
         )
     }
-    
+
     natMenu1() {
         let items = this.props.labels.natTypes
         let itemList = items.map((nat, k) => {
             return (
-                
+
                 <Menu.Item key={`menu-nat1-${k}`}>
                     <a onClick={() => this.props.filterAction(this.props.data,this.props.mod, Action.FILTER_NAT_TYPE1,nat)}>{nat}</a>
                 </Menu.Item>
@@ -73,7 +73,7 @@ class DropDown extends Component {
         });
         return itemList;
     }
-   
+
     osMenu1() {
         let items = this.props.labels.osList
         let itemList = items.map((os, k) => {
@@ -133,10 +133,10 @@ class DropDown extends Component {
         return (
             <div>
                 <Row gutter={24} style={{ margin: "24px 8px" }}>
-                    <DropDownItems type={this.tabContent[0]} menu1={(<Menu>{natMenu1}</Menu>)} menu2={(<Menu>{natMenu2}</Menu>)} 
+                    <DropDownItems type={this.tabContent[0]} menu1={(<Menu>{natMenu1}</Menu>)} menu2={(<Menu>{natMenu2}</Menu>)}
                     selected1={this.props.selectedLabel.NatType1} selected2={this.props.selectedLabel.NatType2}/>
 
-                    <DropDownItems type={this.tabContent[1]} menu1={this.protocolMenu()} menu2={""} 
+                    <DropDownItems type={this.tabContent[1]} menu1={this.protocolMenu()} menu2={""}
                     selected1={this.props.selectedLabel.Protocol}/>
                 </Row>
 
