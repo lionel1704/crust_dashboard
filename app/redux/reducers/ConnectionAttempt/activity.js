@@ -12,7 +12,14 @@ const initialState = {
 const activityReducer = (state=initialState, action) => {
     let filter;
     switch (action.type) {
-        case `${MOD_NAME}_${Action.REVALIDATE}`:
+        // case Action.NEW_LOG:
+        // const logs = state.filteredLogs.concat(action.payload)
+        // state = {
+        //     ...state,
+        //     filteredLogs: applyFilter(logs, state.filter)
+        // };
+        // break;
+        case Action.REVALIDATE:
         state = {
             ...state,
             filteredLogs: applyFilter(action.payload, state.filter)
