@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table} from "antd";
+import { Table, Card, Button} from "antd";
 
 import columns from '../assets/tableData/tableColumn';
 
@@ -25,15 +25,25 @@ return dataSource
 class Tables extends Component {
   render() {
     const {dataSource} = this.props;
-    var filterData=filterLogs(dataSource)  
+    var filterData=filterLogs(dataSource)
     return (
-      <div>
+      <Card
+        style={{
+          background: "#fff",
+          borderRadius: 5,
+        }}
+        className="cus-card-1 table-1"
+        title="Failed Connections"
+      >
+        <div className="table-1-opt">
+          <Button type="primary" icon="download" size="large">Download CSV</Button>
+        </div>
         <Table
           dataSource={filterData}
           columns={columns}
           pagination={false}
         />
-      </div>
+    </Card>
     );
   }
 }
